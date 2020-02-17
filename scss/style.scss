@@ -21,7 +21,7 @@ h2 {
 }
 h3 {
 	color: $blue;
-	font-size: 5rem;
+	font-size: 4.9rem;
 	text-transform: uppercase;
 }
 h4 {
@@ -156,23 +156,23 @@ a {
 		align-items: center;
 	  }
 .slide-1 {
-	background: url(../img/1-slide.jpg)no-repeat bottom;
+	background: url(../img/1-slide.jpg)no-repeat center;
 	background-size: cover;
 }
 .slide-2 {
-	background: url(../img/2-slide.jpg)no-repeat bottom;
+	background: url(../img/2-slide.jpg)no-repeat center;
 	background-size: cover;
 }
 .slide-3 {
-	background: url(../img/3-slide.jpg)no-repeat bottom;
+	background: url(../img/3-slide.jpg)no-repeat center;
 	background-size: cover;
 }
 .slide-4 {
-	background: url(../img/4-slide.jpg)no-repeat bottom;
+	background: url(../img/4-slide.jpg)no-repeat top;
 	background-size: cover;
 }
 .slide-5 {
-	background: url(../img/5-slide.jpg)no-repeat bottom;
+	background: url(../img/5-slide.jpg)no-repeat center ;
 	background-size: cover;
 }
 .swiper-button-prev {
@@ -192,26 +192,37 @@ a {
 	}
 }
 .main {
-	color: #640012;
+	height: 220px;
+	width: 100%;
+	position: absolute;
+	bottom: 120px;
+	left: 0;
+	background: rgba(180,190,180,0.9);
+	border-top: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	color: $red;
+	padding-top: 40px;
 	&-info {
-		padding-top: 300px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		&__text {
+			text-align: left;
 			h1 {
-				text-transform: uppercase;
+				margin-bottom: 20px;
 				font-size: 7.2rem;
-				margin-bottom: 30px;
 			}
-			span {
-				display: block;
-				text-transform: uppercase;
+			p {
+				font-size: 2rem;
+				span {
+					text-transform: uppercase;
+				}
 			}
 		}
-		&__btn {
+		&-btn {
 			color: $red;
-			border-color: $red ;
+			border-color: $red;
+			font-size: 2.4rem;
 		}
 	}
 }
@@ -228,19 +239,21 @@ a {
 		font-size: 1.95rem;
 	}
 	&__block {
+		display: block;
+		cursor: pointer;
 		width: 270px;
 		min-height: 320px;
-		background: #a1daf8;
+		background: #fff;
 		text-align: center;
 		padding: 20px 10px 5px 10px;
-		a {
+		&:hover {
+			background: #a1daf8;
+		}
+		span {
 			display: block;
 			margin-top: 32px;
 			text-transform: uppercase;
 			margin-bottom: 20px;
-			&:hover {
-				color: #fff;
-			}
 		}
 	}
 	&__order {
@@ -283,6 +296,9 @@ a {
 		flex-direction: column;
 		justify-content: center;
 		text-align: center;
+		&:first-child {
+			margin-right: 60px;
+		}
 	}
 	&__img {
 		display: flex;
@@ -336,9 +352,16 @@ a {
 		margin-top: 105px;
 		margin-bottom: 90px;
 	}
-	&__block img {
-		margin: 0 auto;
-	}
+	&__block {
+      img {
+		margin:0 auto;
+	 }
+	 .ikea {
+		 padding-left: 60px;
+	 }
+}
+
+
 }
 .prev-arrow {
 	cursor: pointer;
@@ -355,7 +378,7 @@ a {
 .slick-track {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 .address {
 	padding-top: 60px;
@@ -409,10 +432,10 @@ iframe {
 	}
 	background: #78e3d1;
 	&__addresses {
-		margin-top: 70px;
+		margin-top: 75px;
 		ul li {
 			color: #000;
-			line-height: 3;
+			line-height: 2.5;
 			font-size: 1.9rem;
 		}
 	}
@@ -559,7 +582,7 @@ iframe {
 		
 		}
 		&__table {
-			max-width: 1200px;
+			max-width: 1000px;
 		}
 		&__wrap {
 			overflow: auto;
@@ -573,6 +596,7 @@ iframe {
 	&__title {
 		margin-bottom: 40px;
 		color: #fff;
+		padding-left: 15px;
 	}
 	&__blocks {
 		display: flex;
@@ -585,12 +609,17 @@ iframe {
 	}
 }
 .print {
+	&-wrap {
+		width: 1030px;
+		padding: 15px;
+		margin: 0 auto;
+	}
 	margin-top: 50px;
 	&__info {
 		margin-top: 30px;
 		margin-bottom: 70px;
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
 		&-lists {
 			display: flex;
 			ul:first-child {
@@ -634,10 +663,11 @@ iframe {
 		font-size: 2.4rem;
 		margin-bottom: 50px;
 		font-weight: normal;
+		color: $green;
 	}
 	ul li {
 		font-size: 1.8rem;
-		line-height: 2.7;
+		line-height: 2.5;
 	}
 	p {
 		font-size: 1.8rem;
@@ -649,28 +679,57 @@ iframe {
 	}
 	&__title {
 		margin-top: 50px;
+		margin-left: 50px;
 	}
 	&__files {
 		h5 {
-			margin-top: 70px;
+			margin-top: 60px;
 		}
 		ul {
-			margin-bottom: 70px;
+			margin-bottom: 60px;
 			margin-top: 50px;
+		}
+	}
+	&__resolution {
+		.table {
+			margin: 0 auto;
+			margin-bottom: 40px;
+			font-size: 1.8rem;
+			tr {	
+				td {
+					text-align: center;
+					width: 520px;
+					padding-top: 30px;
+					padding-bottom: 30px;
+					border-right: 1px solid #c5c6c6;
+					border-bottom: 1px solid #c5c6c6;
+					&:last-child {
+						border-right: none;	
+					}
+				}
+				.td-3 {
+					border-bottom: none;
+				}
+			}
 		}
 	}
 	&__transfer {
 		h5 {
-			margin-top: 60px;
-			margin-bottom: 60px;
+			margin-top: 50px;
+			margin-bottom: 50px;
 		}
 		ul li {
-			line-height: 3.5;
+			line-height: 1;
+			margin-bottom: 20px;
 		}
 	}
 	&__warning {
 		h5 {
-			margin-bottom: 30px;
+			margin-bottom: 20px;
+		}
+		ul li {
+			line-height: 1;
+			margin-bottom: 20px;
 		}
 	}
 	&__stickers {
