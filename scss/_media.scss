@@ -83,14 +83,15 @@
             font-size: 3.9rem;
         }
     }
-    .services {
-        &__block {
-            background:#a1daf8;
-        }
-    }
+
     .equipment {
         &__list {
             display: none;
+        }
+    }
+    .services {
+        &__block {
+            background:#a1daf8;
         }
     }
     .footer {
