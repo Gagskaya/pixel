@@ -74,6 +74,11 @@
     .contacts__title::after,.contacts__title::before {
         width: 250px;
     }
+    .clients {
+        .atom {
+            margin-right: 0;
+        }
+    }
 }
 @media screen and (max-width: 991px ) {
     html {
@@ -275,6 +280,11 @@
         }
         #second-list {
             margin-top: 0;
+        }
+    }
+    .clients {
+        .ikea {
+            margin-left: 0;
         }
     }
 }
