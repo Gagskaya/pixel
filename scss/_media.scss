@@ -212,6 +212,9 @@
         width: 600px;
         max-width: 100%;
     }
+    .slide-3,.slide-4,.slide-5 {
+        background-position-y: 0;
+    }
     .print-wrap {
         width: 600px;
         max-width: 100%;
@@ -297,6 +300,9 @@
     }
     .order-btn,.btn {
         max-width: 185px;
+    }
+    .main {
+        bottom: 50px;
     }
     .services {
         &__title {
