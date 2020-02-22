@@ -5,14 +5,25 @@
     .btn {
         width: 235px;
     }
+    h3 {
+        font-size: 3.9rem;
+    }
     .container {
         width: 960px;
     }
     .print-wrap {
         width: 760px;
     }
-    .print__second-list {
-        display: none;
+    .print {
+        &__info {
+            &-lists {
+                flex-wrap: wrap;
+            }
+        }
+        &__first-list {
+            margin-bottom: 10px;
+            margin-right: 0;
+        }
     }
     .address-map {
         width: 100%;
@@ -42,7 +53,7 @@
             flex-wrap: wrap;
         }
         #second-list {
-            display: none;
+            margin-top: 10px;
         }
     }
     .why-us {
@@ -51,6 +62,7 @@
         &__blocks {
             flex-wrap: wrap;
             justify-content: center;
+
         }
         &__block {
             flex-basis: 50%;
@@ -74,19 +86,21 @@
         &-wrap {
             width: 550px;
         }
+        &__title {
+            text-align: center;
+        }
+        &__info {
+            justify-content: center;
+            flex-wrap: wrap;
+
+        }
         &__first-list {
-            display: none;
+            margin-right: 10px;
         }
     }
     .order {
         &-phone {
             font-size: 3.9rem;
-        }
-    }
-
-    .equipment {
-        &__list {
-            display: none;
         }
     }
     .services {
@@ -138,13 +152,8 @@
             }
         }
     }
-    .print {
-        &__title {
-            text-align: center;
-        }
-        &__info {
-            justify-content: center;
-        }
+    .labels__lists, .banners__lists {
+        margin-top: 10px;
     }
     #popup {
         color: #fff;
@@ -260,6 +269,14 @@
            min-height: 280px;
         }
     }
+    .equipment {
+        &-wrap {
+            flex-wrap: wrap;
+        }
+        #second-list {
+            margin-top: 0;
+        }
+    }
 }
 @media screen and (max-width:575px) {
     html {
@@ -340,6 +357,14 @@
             }
         }
     }
+    .equipment {
+        &__lists {
+            justify-content: center;
+        }
+        #second-list {
+            margin-top: 10px;
+        }
+    }
     .address {
         &__order {
             flex-wrap: wrap;
@@ -383,8 +408,20 @@
         background-size: cover;
     }
     .print {
+        &__info {
+            &-lists {
+                justify-content: center;
+            }
+        }
         &__first-list {
-            display: none;
+            margin-right: 0;
+            flex-basis: 100%;
+            text-align: center;
+        }
+        &__second-list {
+            flex-basis: 100%;
+            text-align: center;
+            margin-bottom: 10px;
         }
        &__order-wrap {
            flex-wrap: wrap;

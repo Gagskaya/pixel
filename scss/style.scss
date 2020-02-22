@@ -345,7 +345,8 @@ a {
 }
 .equipment {
 	width: 100%;
-	height: 720px;
+	min-height: 720px;
+	padding-bottom: 80px;
 	background-color: $green;
 	&-wrap {
 		display: flex;
@@ -383,12 +384,14 @@ a {
 		margin-bottom: 90px;
 	}
 	&__block {
-      img {
-		margin:0 auto;
-	 }
-	 .ikea {
-		 padding-left: 60px;
-	 }
+		display: flex !important;
+		justify-content: center !important;
+		.atom {
+			margin-right: 50px;
+		}
+		.ikea {
+			margin-left: 50px;
+		}
 }
 
 
@@ -652,14 +655,11 @@ iframe {
 		justify-content: space-between;
 		&-lists {
 			display: flex;
-			ul:first-child {
-				margin-right: 10px;
-			}
 			ul li {
 				font-size: 1.4rem;
 				text-transform: uppercase;
 			}
-		}
+		}		
 	}
 	&__order {
 		padding: 65px 0;
@@ -670,6 +670,9 @@ iframe {
 			align-items: center;
 		}
 	}
+	&__first-list {
+		margin-right: 10px;
+	}
 }
 .labels {
 	padding-top: 110px;
@@ -677,7 +680,9 @@ iframe {
 		background: url(../img/label-bg.jpg) no-repeat center;
 		background-size: cover;
 	}
-
+	&__lists {
+	justify-content: flex-end;
+	}
 }
 .paper {
 	padding-top: 110px;
@@ -819,6 +824,9 @@ iframe {
 	&-bg {
 		background: url(../img/banners-bg.jpg) no-repeat center;
 		background-size: cover;
+	}
+	&__lists {
+		justify-content: flex-end;
 	}
 }
 .mobile-menu {
