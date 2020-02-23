@@ -14,6 +14,9 @@
     .print-wrap {
         width: 760px;
     }
+    .banners,.contacts,.delivery,.film,.paper,.labels,.requirments {
+        padding-top: 210px;
+    }
     .print {
         &__info {
             &-lists {
@@ -251,7 +254,7 @@
         align-items: center;
         justify-content: space-around;
     }
-    .banners,.contacts,.delivery,.envelope,.paper,.labels,.requirments {
+    .banners,.contacts,.delivery,.film,.paper,.labels,.requirments {
         padding-top: 0;
     }
     .address__order-phone {

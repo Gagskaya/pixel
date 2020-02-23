@@ -112,26 +112,33 @@ a {
 	.menu-btn {
 		position: absolute;
 		width: 20px;
-		height: 3px;
-		background: #000;
+		height: 9px;
 		top: 50%;
-		&::after {
-			content: '';
+		right: 10px;
+		span {
 			position: absolute;
-			top: -4px;
-			height: 3px;
 			width: 20px;
-			background: #000;
-			right: 0;
-		}
-		&::before {
-			content: '';
-			position: absolute;
-			top: 4px;
 			height: 3px;
-			width: 20px;
-			background: #000;
-			right: 0;
+			background:#000;
+			top: 50%;
+			&::after {
+				content: "";
+				width: 20px;
+				height: 3px;
+				background:#000;
+				position: absolute;
+				top: -4px;
+				right: 0;	
+			}
+			&::before {
+				content: "";
+				width: 20px;
+				height: 3px;
+				background:#000;
+				position: absolute;
+				top: 4px;
+				right: 0;	
+			}
 		}
 	}
 	font-size: 1.8rem;
