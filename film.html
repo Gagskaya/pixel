@@ -24,7 +24,7 @@
 		<div class="header__logo">
 			<a href="index.html"><img src="img/logo.png" alt="logo"></a>
 		</div>
-		<i class="fas fa-bars menu-btn"></i>
+		<i class="menu-btn"></i>
 		<nav class="header__nav">
 			<ul class="header__nav-links">
 				<li><a href="film.html" class="active">печать на пленке</a></li>
@@ -237,6 +237,24 @@
 			$(".price .price__tab").removeClass("active").eq($(this).index()).addClass("active");
 			$(".price__table").hide().eq($(this).index()).fadeIn()
 		}).eq(0).addClass("active");
+	</script>
+		<script>
+		    $(document).ready(function () {
+			$('.order-btn').magnificPopup({
+				type: 'inline',
+				preloader: false,
+				focus: '#name',
+				callbacks: {
+					beforeOpen: function () {
+						if ($(window).width() < 700) {
+							this.st.focus = false;
+						} else {
+							this.st.focus = '#name';
+						}
+					}
+				}
+			});
+    });
 	</script>
 </body>
 

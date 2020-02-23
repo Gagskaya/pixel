@@ -24,7 +24,7 @@
 		<div class="header__logo">
 			<a href="index.html"><img src="img/logo.png" alt="logo"></a>
 		</div>
-		<i class="fas fa-bars menu-btn"></i>
+		<i class="menu-btn"></i>
 		<nav class="header__nav">
 			<ul class="header__nav-links">
 				<li><a href="film.html">печать на пленке</a></li>
@@ -213,10 +213,12 @@
 					</li>
 				</ol>
 				<a href="#" class="order-btn">сделать заказ</a>
-				<button class="mfp-close" type="button"><svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
-					<image  class="mfp-close" id="кнопка_закрыть" data-name="кнопка закрыть" width="24" height="24" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAP0lEQVRIiWP8////fwb8gBGvLAMDXv1MGCJUBqMWjFpAOWChNJ0T0j8ayaMWDAELWChN56P1wagFQ90CBgYGALWxCDBfcVQoAAAAAElFTkSuQmCC"/>
-				  </svg>  
-				  </button>
+				<button class="mfp-close" type="button"><svg xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+						<image class="mfp-close" id="кнопка_закрыть" data-name="кнопка закрыть" width="24" height="24"
+							xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAP0lEQVRIiWP8////fwb8gBGvLAMDXv1MGCJUBqMWjFpAOWChNJ0T0j8ayaMWDAELWChN56P1wagFQ90CBgYGALWxCDBfcVQoAAAAAElFTkSuQmCC" />
+					</svg>
+				</button>
 			</fieldset>
 		</form>
 	</div>
@@ -231,6 +233,24 @@
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev',
 			},
+		});
+	</script>
+	<script>
+		$(document).ready(function () {
+			$('.order-btn').magnificPopup({
+				type: 'inline',
+				preloader: false,
+				focus: '#name',
+				callbacks: {
+					beforeOpen: function () {
+						if ($(window).width() < 700) {
+							this.st.focus = false;
+						} else {
+							this.st.focus = '#name';
+						}
+					}
+				}
+			});
 		});
 	</script>
 </body>
